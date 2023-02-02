@@ -1,6 +1,6 @@
 # print('a', 'b', 'c', sep='*')
 # print('d', 'e', 'f', sep='**', end='')
-# print('g', 'h', 'i', sep='+', end='%')
+# print('g', 'h', 'num', sep='+', end='%')
 # print('j', 'k', 'l', sep='-', end='\n')
 # print('m', 'n', 'o', sep='/', end='!')
 # print('p', 'q', 'r', sep='1', end='%')
@@ -62,3 +62,24 @@
 # print(a**b+c**d)
 # n = int(input())
 # print(n*100+(n+n)*10+(n+n+n))
+# n = int(input())
+# if n >= 2:
+#     for num in range(n):
+#         print("*" * (n-num))
+# put your python code here
+# num = int(input())
+# count = 0
+# while num > 0:
+#     if num >= 25 and num % 25 >= 0:
+#         count += 1
+#         num = num-25
+#     if 25 > num >= 10 and num % 10 >= 0:
+#         count += 1
+#         num = num - 10
+#     if 10 > num >= 5 and num % 5 >= 0:
+#         count += 1
+#         num = num-5
+#     if 5 > num >= 1 and num % 1 >= 0:
+#         count += 1
+#         num = num - 1
+# print(count)
