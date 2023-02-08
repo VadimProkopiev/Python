@@ -83,3 +83,30 @@
 #         count += 1
 #         num = num - 1
 # print(count)
+# total = 0
+# count = 0
+# for a in range(26, 28):
+#     for b in range(83, 85):
+#         for c in range(110, 111):
+#             for d in range(100, 140):
+#                 for e in range(140, 150):
+#                     if a**5+b**5+c**5+d**5 == e**5:
+#                         total += 1
+#                         count += 1
+#                         f = a+b+c+d+e
+#                         print(f)
+#                         break
+#                     count += 1
+# print('Общее количество натуральных решений =', total)
+# print(count)
+e = 0
+count = 0
+for a in range(1, 33):
+    for b in range(1, 33):
+        for c in range(1, 33):
+            for d in range(1, 33):
+                if a**3+b**3 == c**3+d**3 and a != b and a != c and a != d and b != c and b != d and c != d:
+                    print(a**3+b**3)
+                count += 1
+
+print(count)
