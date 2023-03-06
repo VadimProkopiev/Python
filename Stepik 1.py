@@ -112,29 +112,39 @@
 # print(count)
 
 import random
-a = random.randint(1, 101)
-print('Добро пожаловать в числовую угадайку')
-print("Введите число от 1 до 100")
-
-
-def is_valid(num):
-    if 0 < num <= 100:
-        return True
-    else:
-        return False
-
-
+a = 0
 b = 0
-while a != b:
-    b = int(input())
-    is_valid(b)
-    if is_valid(b) == False:
-        print('Может быть все-таки введем число от 1 до 100?')
-    if is_valid(b) == True:
-        if a > b:
-            print('Ваше число меньше загаданного, попробуйте еще разок')
-        if a < b:
-            print('Ваше число больше загаданного, поробуйте еще разок')
-    if a == b:
-        print('Вы угодали, поздравляем')
+n = "y"
+while n == "y" or n == "Y":
+    def ugadaika(a, b):
+        count = 1
+        print('Добро пожаловать в числовую угадайку')
+        m = int(input('Введите предел выбора случайного числа: '))
+        a = random.randint(1, m)
+        print("Введите число от 1 до", m)
+
+        def is_valid(num):
+            if 0 < num <= m:
+                return True
+            else:
+                return False
+        while a != b:
+            b = int(input('Введите ваше число: '))
+            is_valid(b)
+            if is_valid(b) == False:
+                print('Может быть все-таки введем число от 1 до', m, '?')
+            if is_valid(b) == True:
+                if a > b:
+                    print('Ваше число меньше загаданного, попробуйте еще разок')
+                if a < b:
+                    print('Ваше число больше загаданного, поробуйте еще разок')
+            if a == b:
+                return print('Вы угодали, поздравляем!'), print('Колличество попыток =', count)
+            count += 1
+    ugadaika(a, b)
+    print('Хотите ли Вы сыграть еще раз? введите Y/N')
+    n = input()
+    if n == 'Y' or n == "y":
+        ugadaika(a, b)
+    if n == 'N' or n == 'n':
         print('Спасибо, что играли в числовую угадайку. Еще увидимся...')
