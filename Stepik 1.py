@@ -99,14 +99,42 @@
 #                     count += 1
 # print('Общее количество натуральных решений =', total)
 # print(count)
-e = 0
-count = 0
-for a in range(1, 33):
-    for b in range(1, 33):
-        for c in range(1, 33):
-            for d in range(1, 33):
-                if a**3+b**3 == c**3+d**3 and a != b and a != c and a != d and b != c and b != d and c != d:
-                    print(a**3+b**3)
-                count += 1
+# e = 0
+# count = 0
+# for a in range(1, 33):
+#     for b in range(1, 33):
+#         for c in range(1, 33):
+#             for d in range(1, 33):
+#                 if a**3+b**3 == c**3+d**3 and a != b and a != c and a != d and b != c and b != d and c != d:
+#                     print(a**3+b**3)
+#                 count += 1
 
-print(count)
+# print(count)
+
+import random
+a = random.randint(1, 101)
+print('Добро пожаловать в числовую угадайку')
+print("Введите число от 1 до 100")
+
+
+def is_valid(num):
+    if 0 < num <= 100:
+        return True
+    else:
+        return False
+
+
+b = 0
+while a != b:
+    b = int(input())
+    is_valid(b)
+    if is_valid(b) == False:
+        print('Может быть все-таки введем число от 1 до 100?')
+    if is_valid(b) == True:
+        if a > b:
+            print('Ваше число меньше загаданного, попробуйте еще разок')
+        if a < b:
+            print('Ваше число больше загаданного, поробуйте еще разок')
+    if a == b:
+        print('Вы угодали, поздравляем')
+        print('Спасибо, что играли в числовую угадайку. Еще увидимся...')
