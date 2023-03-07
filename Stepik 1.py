@@ -222,3 +222,28 @@
 # for _ in range(colpass):
 #     print(generate_password(lenpass, chars))
 # ___________________________________________Шифр Цезаря_____________________________________________________
+# s = input().split(' ')
+# s1 = ""
+
+# for i in range(len(s)):
+#     count = 0
+#     count1 = 0
+#     if len(s[i]) != 0:
+#         count1 = int(count1 + len(s[i]))
+#         s1 = s1+' '
+#     for j in range(len(s[i])):
+#         if s[i][j].isalpha() == True:
+#             count += 1
+#     for letter in s[i]:
+#         if letter.isupper():
+#             s12 = chr(
+#                 (ord(letter) - ord("A") + count) % 26 + ord("A"))
+#         elif letter.islower():
+#             s12 = chr(
+#                 (ord(letter) - ord("a") + count) % 26 + ord("a"))
+#         else:
+#             s12 = letter
+#         s1 += s12
+# s1 = s1.strip()
+# print(s1)
+# ____________________________________________________Калькулятор систем счисления___________________________________________
